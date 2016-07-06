@@ -1,0 +1,648 @@
+html, body {
+	font-family: 'Open Sans', sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+html {
+	font-size: 62.5%;
+	font-size: "Open Sans";
+	font-weight: 300;
+}
+body {
+	background: #000;
+}
+.wrapper {
+	background: #fff;
+	width: 100%;
+	height: 100%;
+}
+img {
+	max-width: 100%;
+}
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+a {
+	color: #000;
+	text-decoration: none;
+  -moz-transition: color 0.5s linear;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+ul,li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+* {
+	box-sizing: border-box;
+}
+
+/* header */
+#page-header {
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	height: 100vh;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* nav */
+.page-nav {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.page-nav ul {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	border-bottom: 1px solid lightgray;
+}
+.page-nav li {
+	display: inline-block;
+	padding: 20px 10px;
+}
+.page-nav a {
+	font-size: 1.5rem;
+	margin-right: 1rem;
+	display: inline-block;
+	padding: 0 0 2px 0;
+	border-bottom: 1px solid transparent;
+}
+.page-nav a:hover, .page-nav a.active {
+	color: #d3b965;
+	border-bottom: 1px solid #d3b965;
+}
+.page-nav li:last-child a {
+	margin-right: 0;
+}
+.show {
+	position: fixed;
+	background: #fff;
+}
+/* header caption */
+.header-caption {
+	padding: 0 1rem;
+}
+.header-caption h1 {
+	font-size: 3rem;
+}
+.header-caption p {
+	font-size: 2rem;
+}
+/* general */
+.section-title {
+	font-size: 5rem;
+	font-weight: 300;
+	margin: 4rem 0 2rem;
+}
+#info, #portfolio, #contact {
+	width: 100%;
+	background-color: #fff;
+	min-height: 100vh;
+	padding: 40px 0 60px;
+	position: relative;
+}
+.floating > p {
+	font-size: 1.2rem;
+	margin-bottom: 0;
+}
+.floating:last-of-type > p {
+	margin-top: 0;
+}
+.arrow {
+	font-size: 2rem;
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	width: 100%;
+}
+.left-marker, .right-marker {
+	width: 80px;
+	height: 5px;
+	margin: 0;
+	position: absolute;
+	bottom: -1px;
+	background-color: #000;
+	box-sizing: content-box;
+}
+	
+.left-marker {
+	left: 0;
+}
+	
+.right-marker {
+	right: 0;
+}
+.square {
+	width: 5px;
+    height: 5px;
+    padding: 0;
+    margin: 15px auto 30px auto;
+    line-height: 0;
+    background-color: #000;
+}
+/* info */
+.info-paragraph {
+	font-size: 1.3rem;
+	line-height: 2.5rem;
+	word-spacing: .2rem;
+	text-align: justify;
+	padding: 0 30px;
+	font-weight: 400;
+}
+.paragraph-list li:after {
+	content: "\00b7";
+	display: block;
+	color: #000;
+	font-size: 4rem;
+	font-weight: bold;
+}
+.modal-toggle, .submit-btn {
+	display: block;
+	background: #000;
+	color: #fff;
+	width: 150px;
+	padding: 1rem 1.5rem;
+	font-size: 1.4rem;
+	font-weight: bold;
+	margin: 1.5rem auto;
+}
+.modal-toggle:hover, .submit-btn:hover {
+	background: #d3b965;
+	color: #000;
+}
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  fill: currentcolor;
+}
+.modal {
+    z-index: 10000; 
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+	height: 100vh;
+    padding: 40px 20px 20px 20px;
+    margin: 20px auto;
+    position: absolute;
+    background-color: transparent;
+}
+.modal.is-visible {
+    visibility: visible;
+}
+.modal-overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 0%, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
+.modal.is-visible .modal-overlay {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.modal-wrapper {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  z-index: 9999;
+  background-color: #fff;
+  max-width: 50rem;
+  box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.35);
+  width: 90%;
+  max-height: 35rem;
+  overflow: auto;
+  margin: auto;
+  padding: 2.5rem 0;
+}
+.modal-transition {
+  transition: all 0.3s 0.12s;
+  transform: translateY(-10%);
+  opacity: 0;
+}
+.modal.is-visible .modal-transition {
+  transform: translateY(0);
+  opacity: 1;
+}
+.modal-header, .modal-content {
+  padding: 1.5em 1em .5em;
+}
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #aaa;
+  background: none;
+  border: 0;
+  width: 50px;
+  outline: none;
+  cursor: pointer;
+}
+.modal-close:hover {
+  color: #777;
+  background: transparent;
+}
+progress {
+    background-color: #f3f3f3;
+    border: 0;
+    height: 3em;
+    width: 100%;
+}
+progress::-webkit-progress-bar {
+    background-color: #ddd;
+}
+progress::-webkit-progress-value {
+    background-color: #000;
+}
+.modal-item {
+	width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.modal-item:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.modal-item span {
+  background: transparent;
+  padding: 5px;
+  float: left;
+  color: #fff;
+}
+.modal-item span:nth-of-type(2) {
+	float: right;
+	color: #000;
+}
+.modal-item > progress {
+  float: none;
+  display: block;
+  height: 30px;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+/* portfolio */
+.grid {
+	margin: 30px auto;
+}
+.grid li {
+	display: block;
+	float: left;
+	width: 100%;
+	opacity: 0;
+}
+.grid li.shown, .no-js .grid li, .no-cssanimations .grid li {
+	opacity: 1;
+}
+.grid li a, .grid li img {
+	outline: none;
+	border: none;
+	display: block;
+	max-width: 100%;
+}
+.grid li.animate {
+	-webkit-animation: fadeIn 0.65s ease forwards;
+	animation: fadeIn 0.65s ease forwards;
+}
+.photo-item {  
+	position: relative;  
+    overflow: hidden;
+  	float: left;
+    width: 33%;
+}  
+  #grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+ .photo-item img {  
+    position: relative;
+    top: 0;
+    left: 0;  
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;  
+}  
+.overbox {  
+    background: rgba(211, 185, 101, .8); 
+    background: rgba(120, 120, 120, .8);
+    background: rgba(0, 0, 0, .8);
+    position: absolute;
+	top:0;
+	left:0;
+    color: #fff;  
+    z-index: 10;  
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;  
+    opacity: 0;   
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}  
+.photo-item:hover .overbox {  
+    opacity: 1;
+}
+.overtext {
+  max-width: 90%;
+  margin: 0 auto;
+  color: #fff;
+	-webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;
+	transform: translateY(40px);
+	-webkit-transform: translateY(40px);
+}
+.photo-item .link {
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	opacity: 0;
+	transition-delay: 0.2s;
+    transition-duration: 0.2s;
+}
+.photo-item:hover .link, .photo-item:focus .link {  
+    opacity: 1;
+	transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+}
+.photo-item .description {
+	font-size: 2.2em;
+	opacity: 0;
+    	transition-delay: 0.1s;
+    transition-duration: 0.2s;
+    margin-bottom: 1.2rem;
+}
+.photo-item:hover .description, .photo-item:focus .description {  
+    opacity: 1;
+	transform: translateX(0px);
+	-webkit-transform: translateX(0px);
+}
+/* contact */
+span {
+	font-size: 1.5rem;
+	margin-left: 5px;
+}
+form {
+	padding-top: 2rem;
+	font-weight: 400;
+}
+label {
+	display: block;
+	font-size: 1.5rem;
+	margin: 1.5rem 0 .7rem;
+}
+input, textarea {
+	width: 30rem;
+	padding: 5px;
+	outline-color: #600;
+}
+.submit-btn {
+	border: 0;
+	cursor: pointer;
+	margin: 4rem auto;
+}
+.contact-text p {
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	word-spacing: .2rem;
+	padding: 0 30px;
+	font-weight: 400;
+}
+/* footer */
+#page-footer {
+	margin-bottom: 1rem;
+	padding: 1rem 0 5rem;
+	width: 90%;
+	border-top: 1px solid lightgray;
+	font-size: 1.5rem;
+	position: relative;
+}
+#page-footer a {
+	font-size: 2rem;
+}
+/* animations */
+	@keyframes pulsate {
+    	0% {opacity: 0;}
+		50% {opacity: 1.0}
+		100% {opacity: 0}
+	}
+	
+	@-moz-keyframes pulsate {
+    	0% {opacity: 0;}
+		50% {opacity: 1.0}
+		100% {opacity: 0}
+	}
+	
+	@-webkit-keyframes pulsate {
+    	0% {opacity: 0;}
+		50% {opacity: 1.0}
+		100% {opacity: 0}
+	}
+@keyframes floating {
+  	0% {
+    transform: translateY(0%);
+	}
+	50% {
+    transform: translateY(16%);
+	}
+	100% {
+    transform: translateY(0%);
+	}
+}
+.floating {
+    -webkit-transition-delay: 2s;
+    -webkit-animation-name: floating;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    transition-delay: 2s;
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes fadeIn {
+	0% { }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+	0% { }
+	100% { opacity: 1; }
+}
+/* media queries */
+@media (min-width: 720px) {
+	.paragraph-list li {
+		float: left;
+		width: 50%;
+		margin-bottom: 2rem;
+	}
+	.paragraph-list li:last-child {
+		clear: both;
+		margin: 0 auto;
+		float: none;
+	}
+	.paragraph-list:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.grid li {
+		float: left;
+		width: 50%;
+	}
+	.grid:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+@media (min-width: 960px) {
+	.paragraph-list li, .paragraph-list li:last-child {
+		float: left;
+		width: 33%;
+		margin-bottom: 2rem;
+	}
+	.paragraph-list li:last-child {
+		clear: none;
+	}
+	.grid li {
+		width: 33%;
+	}
+	#contact > ul li {
+		float: left;
+		width: 50%;
+	}
+	#contact > ul:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.contact-text {
+		height: 410px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+.header-overlay {
+	background: #000;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#preload {
+	width: 100%;
+	height: 100%;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	background-color: #000;
+	z-index: 1000;
+	display: none;
+}
+	
+	#status {
+		width: 100px;
+		height: 58px;
+		padding: 0;
+		margin: auto;
+		color: #fff;
+		text-align: center;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		display: block;
+		border-bottom: 1px solid #fff;
+	}
+	
+		#status i {
+			font-size: 4em;
+		}
+	
+	#status {
+		opacity: 1;
+		-moz-animation: pulsate 2s ease-out;
+	    -moz-animation-iteration-count: infinite;
+    	-webkit-animation: pulsate 2s ease-out;
+	    -webkit-animation-iteration-count: infinite;
+		animation: pulsate 2s ease-out;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes pulsate {
+    	0% {opacity: 0;}
+		50% {opacity: 1.0}
+		100% {opacity: 0}
+	}
+	
+	@-moz-keyframes pulsate {
+    	0% {opacity: 0;}
+		50% {opacity: 1.0}
+		100% {opacity: 0}
+	}
+	
+	@-webkit-keyframes pulsate {
+    	0% {opacity: 0;}
+		50% {opacity: 1.0}
+		100% {opacity: 0}
+	}
+/*	End: Splash screen */

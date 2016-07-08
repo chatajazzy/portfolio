@@ -1,4 +1,5 @@
 //preloader
+document.body.classList.add("js");
 
 $(window).load(preLoader);
 

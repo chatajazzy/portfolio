@@ -142,9 +142,6 @@ h1,h2,h3,h4,h5,h6 {
 .page-nav li:last-child a {
 	margin-right: 0;
 }
-.js .page-nav h2 {
-	display: none;
-}
 .show {
 	position: fixed;
 	background: #fff;

@@ -142,6 +142,9 @@ h1,h2,h3,h4,h5,h6 {
 .page-nav li:last-child a {
 	margin-right: 0;
 }
+.js .page-nav h2 {
+	display: none;
+}
 .show {
 	position: fixed;
 	background: #fff;
@@ -307,7 +310,7 @@ h1,h2,h3,h4,h5,h6 {
           transition-delay: 0s;
 }
 .modal-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0; left: 0; bottom: 0; right: 0;
   z-index: 9999;
   background-color: #fff;
@@ -391,6 +394,14 @@ progress::-webkit-progress-bar {
 }
 progress::-webkit-progress-value {
     background-color: #000;
+}
+.socials a {
+	display: inline-block;
+	width: 50px;
+
+}
+.socials a:hover svg {
+	fill: #d3b965; 
 }
 /* portfolio */
 .grid {

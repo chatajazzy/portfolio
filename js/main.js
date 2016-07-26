@@ -99,14 +99,13 @@ $(function() {
 $(".modal-toggle").on("click", function(e) {
   e.preventDefault();
   $(".modal").toggleClass("is-visible");
-});
-
-$(function() {
   $("progress").each(function() {
     var max = $(this).val();
     $(this).val(0).animate({ value: max }, { duration: 2000, easing: 'linear' });
-			});
+      });
 });
+
+
 //porftolio animation 
 	new AnimOnScroll( document.getElementById( 'grid' ), {
 				minDuration : 0.4,

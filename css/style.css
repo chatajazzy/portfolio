@@ -221,6 +221,13 @@ h6 {
     left: 0;
     width: 100%;
 }
+.show-aside {
+    position: fixed;
+    bottom: 20px;
+    left: 90%; 
+    width: 50px;
+    z-index: 10000;
+}
 .left-marker,
 .right-marker {
     width: 80px;
@@ -266,12 +273,16 @@ h6 {
     font-size: 4rem;
     font-weight: bold;
 }
+.skills-section {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
 /* skill modal */
 
 .modal-toggle,
 .submit-btn {
     display: block;
-    background: #000;
+    background: #d3b965;
     color: #fff;
     width: 150px;
     padding: 10px 15px;
@@ -279,12 +290,10 @@ h6 {
     font-size: 14px;
     font-size: 1.4rem;
     font-weight: bold;
-    margin: 15px auto;
     margin: 1.5rem auto;
 }
 .modal-toggle:hover,
 .submit-btn:hover {
-    background: #d3b965;
     color: #000;
 }
 .icon {
@@ -417,6 +426,9 @@ progress::-webkit-progress-bar {
 }
 progress::-webkit-progress-value {
     background-color: #000;
+}
+.socials {
+    margin: 5rem 0;
 }
 .socials a {
     display: inline-block;
@@ -563,6 +575,7 @@ textarea {
     cursor: pointer;
     margin: 40px auto;
     margin: 4rem auto;
+    transition: color 0.5s linear;
 }
 .contact-text p {
     font-size: 15px;
@@ -577,10 +590,10 @@ textarea {
 /* footer */
 
 .page-footer {
-    margin-bottom: 10px;
-    margin-bottom: 1rem;
+/*     margin-bottom: 10px;
+margin-bottom: 1rem; */
     padding: 10px 0 50px;
-    padding: 1rem 0 5rem;
+    padding: 1rem 0;
     width: 90%;
     border-top: 1px solid lightgray;
     font-size: 15px;
@@ -659,6 +672,9 @@ textarea {
         content: "";
         display: block;
         clear: both;
+    }
+    .show-aside {
+        left: 95%;
     }
 }
 @media (min-width: 960px) {

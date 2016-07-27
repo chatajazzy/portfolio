@@ -46,6 +46,19 @@ $('#info').waypoint(function() {
  	};   	
 });
 
+//display footer arrow on scroll
+  $(window).scroll(function() {
+// 100 = The point you would like to fade the nav in.
+  if ($(window).scrollTop() > 10){
+    
+    $('#back').addClass('show-aside');
+    
+  } else {
+    
+    $('#back').removeClass('show-aside');
+    
+  };    
+});
 //data spy on scroll
 	var sections = $('section')
   , nav = $('.page-nav')

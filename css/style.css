@@ -223,7 +223,7 @@ h6 {
 }
 .show-aside {
     position: fixed;
-    bottom: 20px;
+    bottom: 50px;
     left: 90%; 
     width: 50px;
     z-index: 10000;

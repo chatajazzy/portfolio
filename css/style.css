@@ -392,6 +392,7 @@ h6 {
     width: 100%;
     margin-bottom: 10px;
     padding: 5px;
+    position: relative;
 }
 .modal-item:after {
     content: "";
@@ -400,31 +401,32 @@ h6 {
 }
 .modal-item span {
     background: transparent;
-    padding: 2px 5px;
-    float: left;
     color: #fff;
+    line-height: 3rem;
+    padding: 0 5px;
+    position: absolute;
+}
+.progress-skill {
+    left: 5px;
 }
 .modal-item span:nth-of-type(2) {
-    float: right;
     color: #000;
+    right: 10px;
 }
 .modal-item > progress {
-    float: none;
     display: block;
-    height: 30px;
+    height: 3rem;
     width: 100%;
-    background-color: #f3f3f3;
-}
-progress {
-    background-color: #f3f3f3;
     border: 0;
-    height: 3em;
-    width: 100%;
 }
+
 progress::-webkit-progress-bar {
     background-color: #ddd;
 }
 progress::-webkit-progress-value {
+    background-color: #000;
+}
+progress::-moz-progress-bar {
     background-color: #000;
 }
 .socials {
@@ -567,8 +569,11 @@ textarea {
     padding: 5px;
     background: #fff;
     border: 1px solid #aaa;
-    outline-color: #600 !important;
     font-family: 'Open Sans', sans-serif;
+}
+input:focus,
+textarea:focus {
+   outline: 1px solid #000 !important;
 }
 .submit-btn {
     border: 0;

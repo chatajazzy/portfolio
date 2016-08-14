@@ -1,3 +1,17 @@
+$(function() {
+  var $columns = $('.header-item');
+var height = 0;
+$columns.each(function () {
+  if ($(this).height() > height) {
+    height = $(this).height();
+  }
+});
+
+$columns.height(height);
+  $("#page-header h1").fitText(1, { minFontSize: '25px', maxFontSize: '55px' });
+  $("#page-header .subtitle").fitText(1, { minFontSize: '12px', maxFontSize: '25px' });
+});
+
 //preloader
 document.body.classList.add("js");
 
@@ -108,6 +122,8 @@ $(function() {
   });
 });
 
+
+
 //skills modal
 $(".modal-toggle").on("click", function(e) {
   e.preventDefault();
@@ -118,10 +134,54 @@ $(".modal-toggle").on("click", function(e) {
       });
 });
 
-
 //porftolio animation 
 	new AnimOnScroll( document.getElementById( 'grid' ), {
 				minDuration : 0.4,
 				maxDuration : 0.7,
 				viewportFactor : 0.2
 			} );
+
+
+/*global jQuery */
+/*!
+* FitText.js 1.2
+*
+* Copyright 2011, Dave Rupert http://daverupert.com
+* Released under the WTFPL license
+* http://sam.zoy.org/wtfpl/
+*
+* Date: Thu May 05 14:23:00 2011 -0600
+*/
+
+(function( $ ){
+
+  $.fn.fitText = function( kompressor, options ) {
+
+    // Setup options
+    var compressor = kompressor || 1,
+        settings = $.extend({
+          'minFontSize' : Number.NEGATIVE_INFINITY,
+          'maxFontSize' : Number.POSITIVE_INFINITY
+        }, options);
+
+    return this.each(function(){
+
+      // Store the object
+      var $this = $(this);
+
+      // Resizer() resizes items based on the object width divided by the compressor * 10
+      var resizer = function () {
+        $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
+      };
+
+      // Call once to set.
+      resizer();
+
+      // Call on resize. Opera debounces their resize by default.
+      $(window).on('resize.fittext orientationchange.fittext', resizer);
+
+    });
+
+  };
+
+})( jQuery );

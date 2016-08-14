@@ -26,7 +26,7 @@
 	<meta name="theme-color" content="#ffffff">
 
   	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 	<div class="header-overlay">
@@ -46,11 +46,16 @@
 					</ul>
 				</nav>
 				<div class="header-caption">
-					<a href="index.html">
+				<div class="header-photo header-item">
+					<img src="img/avatar.jpg" alt="">
+				</div>
+				<div class="header-text header-item">
+						<a href="index.html">
 						<h1>Cześć! Jestem&nbsp;Paulina</h1>
 						<div class="square"></div>
 					</a>
-					<p>początkująca front&nbsp;end&nbsp;developer</p>
+					<p class="subtitle">początkująca front&nbsp;end&nbsp;developer</p>
+				</div>
 				</div>
 				<a href="#info" class="arrow floating">
 					<p>Zjedź na dół</p>
@@ -327,7 +332,6 @@ $(document).ready(preLoader);
 <script src="js/AnimOnScroll.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
 <script src="js/main.js"></script>
-
 </body>
 </html>
 

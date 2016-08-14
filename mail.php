@@ -17,10 +17,10 @@ mail($to, $name, $message, $headers);
   align-items: center;
   justify-content: center;">
 		<?php
-		echo "<p>Dzięki za kontakt. Odezwę się tak prędko jak się da. ;)</p>";
+		echo "<p style="font-size: 20px;">Dzięki za kontakt. Odezwę się tak prędko jak się da. ;)</p>";
 		?>
 		<?php
-		echo "<a href='http://test15674.futurehost.pl' style=' color: #fff;
+		echo "<a href='http://paulinachatkiewicz.pl' style=' color: #fff;
   text-decoration: none;
   display: block;
   padding: 10px 15px;

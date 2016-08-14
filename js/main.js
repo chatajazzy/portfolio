@@ -8,8 +8,8 @@ $columns.each(function () {
 });
 
 $columns.height(height);
-  $("#page-header h1").fitText(1, { minFontSize: '25px', maxFontSize: '55px' });
-  $("#page-header .subtitle").fitText(1, { minFontSize: '12px', maxFontSize: '25px' });
+  $("#page-header h1").fitText(1, { minFontSize: '22px', maxFontSize: '55px' });
+  $("#page-header .subtitle").fitText(1, { minFontSize: '10px', maxFontSize: '25px' });
 });
 
 //preloader

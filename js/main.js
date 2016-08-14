@@ -1,14 +1,15 @@
 $(function() {
+  //same height for header items
   var $columns = $('.header-item');
-var height = 0;
+  var height = 0;
 $columns.each(function () {
   if ($(this).height() > height) {
     height = $(this).height();
   }
 });
-
+// fittex trigger
 $columns.height(height);
-  $("#page-header h1").fitText(1, { minFontSize: '22px', maxFontSize: '55px' });
+  $("#page-header h1").fitText(1, { minFontSize: '25px', maxFontSize: '55px' });
   $("#page-header p.subtitle").fitText(1, { minFontSize: '10px', maxFontSize: '25px' });
 });
 
@@ -141,17 +142,6 @@ $(".modal-toggle").on("click", function(e) {
 				viewportFactor : 0.2
 			} );
 
-
-/*global jQuery */
-/*!
-* FitText.js 1.2
-*
-* Copyright 2011, Dave Rupert http://daverupert.com
-* Released under the WTFPL license
-* http://sam.zoy.org/wtfpl/
-*
-* Date: Thu May 05 14:23:00 2011 -0600
-*/
 
 (function( $ ){
 

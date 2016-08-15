@@ -10,7 +10,7 @@ $columns.each(function () {
 // fittex trigger
 $columns.height(height);
   $("#page-header h1").fitText(1, { minFontSize: '25px', maxFontSize: '55px' });
-  $("#page-header p.subtitle").fitText(1, { minFontSize: '10px', maxFontSize: '25px' });
+  $("#page-header p.subtitle").fitText(1, { minFontSize: '10px', maxFontSize: '22px' });
 });
 
 //preloader

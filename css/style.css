@@ -777,3 +777,11 @@ textarea:focus {
         justify-content: center;
     }
 }
+@media only screen and (min-width: 400px) and (orientation: portrait) {
+    .header-caption {
+        width: 80%;
+    }
+    .header-photo {
+        margin-bottom: 25%; 
+    }
+}

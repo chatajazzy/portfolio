@@ -12,13 +12,10 @@ $(window).load(preLoader);
 
 function preLoader() {
 	setTimeout(function() {
-		$('#preload').delay(750).fadeOut(750);
-    var myHeight = $(window).height();
-    if (myHeight >= 270) {
         $('#page-header').delay(1000).css({border: '0 solid white'}).animate({
         borderWidth: 15
     }, 500);
-    }
+    
 		$('nav').delay(1750).css({display: 'none'}).fadeIn(500);
 		$('#page-header .square').delay(750).animate({paddingRight : '40px', paddingLeft : '40px'},500);
 	}, 500);

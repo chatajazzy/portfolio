@@ -103,7 +103,7 @@ h6 {
     left: 0;
     width: 100%;
    /*  background-color: #fff; */
-   background: url(../img/header.jpg) no-repeat 48% center;
+   background: url(../img/header-small.jpg) no-repeat 48% center;
    background-size: cover;
    background-attachment: fixed;
     height: 100vh;
@@ -737,6 +737,9 @@ textarea:focus {
     }
 }
 @media (min-width: 960px) {
+    #page-header {
+        background: url(../img/header.jpg) no-repeat 48% center;
+    }
     .paragraph-list li,
     .paragraph-list li:last-child {
         float: left;

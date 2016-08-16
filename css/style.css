@@ -112,7 +112,7 @@ h6 {
 content: '';
 display: block;
 height: 100%;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.5);
 }
 #page-header .arrow.floating {
     color: #fff;

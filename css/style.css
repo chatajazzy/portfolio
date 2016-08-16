@@ -680,10 +680,16 @@ textarea:focus {
         opacity: 1;
     }
 }
-@media only screen and (max-height: 400px) and (orientation: landscape) {
-  /*   .header-caption {
-      width: 80%;
-  } */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-caption {
+      width: 90%;
+  }
+  .header-caption h1 {
+      font-size: 3.2rem !important;
+  }
+  .header-caption p.subtitle {
+      font-size: 1.6rem !important;
+  }
     #page-header a.arrow.floating {
         height: 40px !important;
     }

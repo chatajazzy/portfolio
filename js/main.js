@@ -1,16 +1,8 @@
 $(function() {
-  //same height for header items
-  var $columns = $('.header-item');
-  var height = 0;
-$columns.each(function () {
-  if ($(this).height() > height) {
-    height = $(this).height();
-  }
-});
+
 // fittex trigger
-$columns.height(height);
-  $("#page-header h1").fitText(1, { minFontSize: '25px', maxFontSize: '55px' });
-  $("#page-header p.subtitle").fitText(1, { minFontSize: '10px', maxFontSize: '22px' });
+  $("#page-header h1").fitText(1, { minFontSize: '25px', maxFontSize: '60px' });
+  $("#page-header p.subtitle").fitText(1, { minFontSize: '10px', maxFontSize: '20px' });
 });
 
 //preloader
@@ -21,7 +13,7 @@ $(window).load(preLoader);
 function preLoader() {
 	setTimeout(function() {
 		$('#preload').delay(750).fadeOut(750);
-		$('#page-header').delay(1000).css({border: '0 solid black'}).animate({
+		$('#page-header').delay(1000).css({border: '0 solid white'}).animate({
         borderWidth: 15
     }, 500);
 		$('nav').delay(1750).css({display: 'none'}).fadeIn(500);

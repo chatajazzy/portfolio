@@ -26,7 +26,7 @@
 	<meta name="theme-color" content="#ffffff">
 
   	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div class="header-overlay">
@@ -46,16 +46,11 @@
 					</ul>
 				</nav>
 				<div class="header-caption">
-				<div class="header-photo header-item">
-					<img src="img/avatar.jpg" alt="">
-				</div>
-				<div class="header-text header-item">
 						<a href="index.html">
 						<h1>Cześć! Jestem&nbsp;Paulina</h1>
 						<div class="square"></div>
 					</a>
 					<p class="subtitle">początkująca front&nbsp;end&nbsp;developer</p>
-				</div>
 				</div>
 				<a href="#info" class="arrow floating">
 					<p>Zjedź na dół</p>
@@ -281,7 +276,7 @@
 		<h2 class="section-title">Kontakt</h2>
 		<div class="square"></div>
 		<ul>
-			<li class="contact-form">
+			<li class="contact-form contact-item">
 				<form method="post" action="mail.php" name="mail">
             		<label for="name">Twoje imię</label>
             		<input type="text" id="name" name="name" required="required">
@@ -292,8 +287,9 @@
           			<button type="submit" class="submit-btn">Wyślij</button>
       			</form>
 			</li>
-			<li class="contact-text">
-				<p>Jeśli chciałbyś nawiązać współpracę skontaktuj się ze mną korzystając z&nbsp;podanego formularza lub z&nbsp;poniższych danych:<br><br>chatkiewicz.paulina@gmail.com<br>695 931 615<br><br><strong>Paulina Chatkiewicz</strong></p>
+			<li class="contact-text contact-item">
+				<p>Jeśli chciałbyś nawiązać współpracę skontaktuj się ze mną korzystając z&nbsp;podanego formularza lub z&nbsp;poniższych danych:<br><br><a href="mailto:kontakt@paulinachatkiewicz.pl">kontakt@paulinachatkiewicz.pl</a>
+<br>695 931 615<br><br><strong>Paulina Chatkiewicz</strong></p>
 			</li>
 		</ul>  
 	</section>
@@ -316,7 +312,7 @@ $(document).ready(function(){
 function preLoader() {
 	setTimeout(function() {
 		$('#preload').fadeOut(750);
-		$('#page-header').delay(1500).css({border: '0 solid black'}).animate({
+		$('#page-header').delay(1500).css({border: '0 solid whit#fffe'}).animate({
         borderWidth: 15
     }, 500);
 		$('nav').delay(1750).css({display: 'none'}).fadeIn(500);

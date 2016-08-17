@@ -26,7 +26,7 @@
 	<meta name="theme-color" content="#ffffff">
 
   	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/half.css">
 </head>
 <body>
 	<div class="header-overlay">
@@ -36,7 +36,7 @@
 	        </div>
 	    </div>
 		<header id="page-header">
-			<div class="container">
+			
 				<nav class="page-nav">
 				<h2>Page Navigation</h2> 
 					<ul>
@@ -45,6 +45,7 @@
 						<li><a href="#contact" title="zobacz jak można mnie złapać">kontakt</a></li>
 					</ul>
 				</nav>
+				<div class="header-photo"></div>
 				<div class="header-caption">
 						<a href="index.html">
 						<h1>Cześć! Jestem&nbsp;Paulina</h1>
@@ -56,7 +57,7 @@
 					<p>Zjedź na dół</p>
 					&Downarrow;
 				</a>
-			</div>
+		
 		</header>
 	</div>
 	<section id="info">
@@ -312,11 +313,14 @@ $(document).ready(function(){
 function preLoader() {
 	setTimeout(function() {
 		$('#preload').fadeOut(750);
-		$('#page-header').delay(1500).css({border: '0 solid #fff'}).animate({
+		/*$('#page-header').delay(1500).css({border: '0 solid #fff'}).animate({
         borderWidth: 15
-    }, 500);
-		$('nav').delay(1750).css({display: 'none'}).fadeIn(500);
+    }, 500);*/
+		$('nav').delay(1000).css({display: 'none'}).fadeIn(300);
 		$('#page-header .square').delay(750).animate({paddingRight : '40px', paddingLeft : '40px'},500);
+		$('.header-photo').delay(1250).css({display: 'none'}).fadeIn(400);
+  		$('.header-caption').delay(1350).css({display: 'none'}).fadeIn(550);
+  		$('#page-header .arrow.floating').delay(1450).css({display: 'none'}).fadeIn(650);
 	}, 500);
 };
 $(document).ready(preLoader);

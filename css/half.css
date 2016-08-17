@@ -773,3 +773,47 @@ textarea:focus {
         justify-content: center;
     }
 }
+
+
+/* styles */
+@media (min-width: 450px) and (orientation: landscape) {
+    #page-header {
+        background: #fff;
+        background-attachment: scroll !important;
+    }
+    #page-header:after {
+        background: #fff;
+    }
+    .header-photo {
+        width: 50%;
+   /*      height: calc(100vh - 30px);
+            */        
+        height: 100vh;
+        background: url(../img/avatar.jpg) no-repeat center;
+        background-size: cover;       
+    }
+    .page-nav a {
+        color: #000;
+    }
+    .header-caption {
+        width: 50%;
+          position: absolute;
+          top: 50%;
+          left: 100%;
+          transform: translate(-100%, -50%);
+          padding: 15px;
+                     
+    }
+    .header-caption .square {
+        background: #000;
+    }
+    .header-caption h1, .header-caption p {
+        color: #000;
+    }
+    #page-header .arrow.floating {
+        color: #000;
+        width: 50%;
+                left: 50%;
+        transform: translate(-50%);
+    }
+}

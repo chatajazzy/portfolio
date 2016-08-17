@@ -773,3 +773,37 @@ textarea:focus {
         justify-content: center;
     }
 }
+
+/* styles */
+@media (min-width: 450px) and (orientation: landscape) {
+    .header-caption {
+        width: 50% !important;
+        position: absolute;
+  top: 40%;
+  right: 5%;
+/*   padding-top: 64px; */
+  transform: translate(-5%, -40%);
+  padding: 15px;
+  width: 90%;
+    }
+    #page-header {
+          position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+   /*  background-color: #fff; */
+   background: url(../img/header.jpg) no-repeat 65% 40%;
+/*    background-size: cover; */
+   background-attachment: fixed !important;
+    height: 100vh;
+    }
+}
+@media (min-width: 765px) and (orientation: landscape) {
+    .header-caption {
+        top: 30%;
+        right: 0 !important;
+        transform: translate(0, -30%);
+    }
+}

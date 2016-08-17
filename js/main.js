@@ -1,7 +1,7 @@
 $(function() {
 
 // fittex trigger
-  $("#page-header h1").fitText(1, { minFontSize: '25px', maxFontSize: '60px' });
+  $("#page-header h1").fitText(1, { minFontSize: '20px', maxFontSize: '60px' });
   $("#page-header p.subtitle").fitText(1, { minFontSize: '10px', maxFontSize: '20px' });
 });
 
@@ -10,7 +10,7 @@ document.body.classList.add("js");
 
 $(window).load(preLoader);
 
-function preLoader() {
+/*function preLoader() {
 	setTimeout(function() {
         $('#page-header').delay(1000).css({border: '0 solid white'}).animate({
         borderWidth: 15
@@ -18,8 +18,10 @@ function preLoader() {
     
 		$('nav').delay(1750).css({display: 'none'}).fadeIn(500);
 		$('#page-header .square').delay(750).animate({paddingRight : '40px', paddingLeft : '40px'},500);
+      $('.header-photo').delay(1850).css({display: 'none'}).fadeIn(600);
+  $('.header-caption').delay(1950).css({display: 'none'}).fadeIn(900);
 	}, 500);
-};
+};*/
 
 //waypoint markers and square animations
 $('#info').waypoint(function() {

@@ -8,21 +8,6 @@ $(function() {
 //preloader
 document.body.classList.add("js");
 
-$(window).load(preLoader);
-
-/*function preLoader() {
-	setTimeout(function() {
-        $('#page-header').delay(1000).css({border: '0 solid white'}).animate({
-        borderWidth: 15
-    }, 500);
-    
-		$('nav').delay(1750).css({display: 'none'}).fadeIn(500);
-		$('#page-header .square').delay(750).animate({paddingRight : '40px', paddingLeft : '40px'},500);
-      $('.header-photo').delay(1850).css({display: 'none'}).fadeIn(600);
-  $('.header-caption').delay(1950).css({display: 'none'}).fadeIn(900);
-	}, 500);
-};*/
-
 //waypoint markers and square animations
 $('#info').waypoint(function() {
   		$('#info .square').animate({paddingRight : '40px', paddingLeft : '40px'},500);

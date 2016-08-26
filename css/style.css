@@ -43,10 +43,8 @@ h6 {
     padding: 0;
     font-weight: normal;
 }
-* {
-    box-sizing: border-box;
-}
 /* preloader */
+
 #preload {
     width: 100%;
     height: 100%;
@@ -87,12 +85,12 @@ h6 {
     animation-iteration-count: infinite;
 }
 /* header */
+
 .header-overlay {
     background: #fff;
     width: 100%;
     height: 100%;
     position: relative;
-
 }
 #page-header {
     position: relative;
@@ -101,22 +99,24 @@ h6 {
     bottom: 0;
     left: 0;
     width: 100%;
-   /*  background-color: #fff; */
-   background: url(../img/header-small.jpg) no-repeat 48% center;
-   background-size: cover;
-   background-attachment: fixed !important;
+    /*  background-color: #fff; */
+    
+    background: url(../img/header-small.jpg) no-repeat 48% center;
+    background-size: cover;
+    background-attachment: fixed !important;
     height: 100vh;
 }
 #page-header:after {
-content: '';
-display: block;
-height: 100%;
+    content: '';
+    display: block;
+    height: 100%;
     background: rgba(0, 0, 0, .3);
 }
 #page-header .arrow.floating {
     color: #fff;
 }
 /* nav */
+
 .page-nav {
     width: 100%;
     position: absolute;
@@ -128,7 +128,7 @@ height: 100%;
     width: 90%;
     max-width: 1000px;
     margin: 0 auto;
-   /*  border-bottom: 1px solid lightgray; */
+    /*  border-bottom: 1px solid lightgray; */
 }
 .page-nav li {
     display: inline-block;
@@ -158,22 +158,22 @@ height: 100%;
 .show {
     position: fixed;
     background: #fff;
-    -webkit-box-shadow: 0px 1px 5px -3px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 5px -3px rgba(0,0,0,0.75);
-box-shadow: 0px 1px 5px -3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 5px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 5px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 5px -3px rgba(0, 0, 0, 0.75);
 }
 .page-nav.show a {
     color: #000;
 }
 /* header caption */
+
 .header-caption {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-/*   padding-top: 64px; */
-  transform: translate(-50%, -85%);
-  padding: 15px;
-  width: 90%;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    padding: 15px;
+    width: 90%;
 }
 .header-caption h1 {
     color: #fff;
@@ -192,8 +192,8 @@ box-shadow: 0px 1px 5px -3px rgba(0,0,0,0.75);
     display: block;
     clear: both;
 }
-
 /* general */
+
 .section-title {
     font-size: 50px;
     font-size: 5rem;
@@ -272,6 +272,7 @@ box-shadow: 0px 1px 5px -3px rgba(0,0,0,0.75);
     background-color: #000;
 }
 /* info */
+
 .info-paragraph {
     font-size: 13px;
     font-size: 1.3rem;
@@ -296,6 +297,7 @@ box-shadow: 0px 1px 5px -3px rgba(0,0,0,0.75);
     margin-bottom: 2rem;
 }
 /* skill modal */
+
 .modal-toggle,
 .submit-btn {
     display: block;
@@ -454,6 +456,7 @@ progress::-moz-progress-bar {
     fill: #d3b965;
 }
 /* portfolio */
+
 .grid {
     margin: 30px auto;
 }
@@ -602,6 +605,7 @@ textarea:focus {
     font-weight: 400;
 }
 /* footer */
+
 .page-footer {
     padding: 10px 0 50px;
     padding: 1rem 0;
@@ -616,26 +620,24 @@ textarea:focus {
     font-size: 2rem;
 }
 /* animations */
+
 @-webkit-keyframes pulsate {
     0% {
         opacity: 0;
     }
     50% {
         opacity: 1.0;
-        
     }
     100% {
         opacity: 0;
     }
 }
-
 @keyframes pulsate {
     0% {
         opacity: 0;
     }
     50% {
         opacity: 1.0;
-        
     }
     100% {
         opacity: 0;
@@ -681,19 +683,20 @@ textarea:focus {
 }
 @media only screen and (max-height: 500px) and (orientation: landscape) {
     .header-caption {
-    width: 90%;
+        width: 90%;
     }
     .header-caption h1 {
-    font-size: 3rem !important;
+        font-size: 3rem !important;
     }
     .header-caption p.subtitle {
-    font-size: 1.6rem !important;
+        font-size: 1.6rem !important;
     }
-  #page-header a.arrow.floating {
-      height: 40px !important;
-  } 
+    #page-header a.arrow.floating {
+        height: 40px !important;
+    }
 }
 /* media queries */
+
 @media only screen and (min-width: 720px) {
     html {
         font-size: 75%;
@@ -704,9 +707,6 @@ textarea:focus {
     .modal-toggle {
         padding: 1rem 0;
     }
-   /*  .header-caption h1 {
-       font-size: 4.5rem;
-   } */
     .paragraph-list li {
         float: left;
         width: 50%;
